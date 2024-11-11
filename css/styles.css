@@ -30,7 +30,10 @@ header {
         }
 
         a {
+            font-size: 1.5rem;
+            color:black;
             text-decoration: none;
+            font-family: "Bebas Neue", sans-serif;
         }
 
     
@@ -41,3 +44,10 @@ header {
     }
     }
 
+main {
+
+    article.formulario-newsletter
+    {
+        background: url("../img/newsletter_bg.jpg"); 
+    }
+}
