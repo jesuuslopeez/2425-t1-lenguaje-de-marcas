@@ -2,52 +2,162 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: monospace;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
-    background-color: grey;
-
-    a {
-
+    .header-1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.3rem;
+        background-color: #0090C3;
+    
         img {
-            width: 200px;
+            width: 30%;
+            transition: transform 0.4s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.1);
         }
     
+        nav {
+    
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                height: 100%;
+    
+                li {
+                    a {
+                        font-size: 1.3rem;
+                        color:white;
+                        font-family: "Bebas Neue", sans-serif;
+                        transition: color 0.3s ease, transform 0.3s ease;
+                    }
+    
+                    a:hover {
+                        color: #FFBE00; 
+                        transform: scale(1.1); 
+                        text-decoration: underline; 
+                    }
+                }
+            }   
+        }
     }
-
-    nav {
-
-        ul {
-            list-style: none;
+    
+    .header-2 {
+        position: relative;
+        padding: 1rem 0;
+        background-color: #0078A0;
+        background-image: url("../img/exdj.png");
+    
+        .icon-wrapper {
+            position: absolute;
+            top: -15px; 
+            right: 1.5rem;
+            background-color: #0078A0;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            height: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+    
+        .icons {
+            display: flex;
+            gap: 1.5rem;
+    
+            a {
+                img {
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                    transition: transform 0.2s ease;
+                }
+    
+                img:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem; 
+    font-family: "Raleway", sans-serif;
+    color: white;
+    background-color: #0078A0;
+
+    .footer-1 {
+        img {
+            width: 6rem; 
+            transition: transform 0.4s ease;
         }
 
-        a {
-            font-size: 1.5rem;
-            color:black;
-            text-decoration: none;
-            font-family: "Bebas Neue", sans-serif;
+        img:hover {
+            transform: scale(1.1);
         }
-
     
     }
 
-    .header_mini_images {
-        width: 2rem;
-    }
+    .footer-2 {
+        flex: 1;
+        margin-left: 1.25rem;
+
+        p {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+
+            .icons {
+                width: 2%;
+                margin-right: 0.5rem;
+            }
+        }
     }
 
-main {
+    .footer-3, .footer-4, .footer-5 {
+        ul {
+            li {
+                margin: 0.5rem 0;
 
-    article.formulario-newsletter
-    {
-        background: url("../img/newsletter_bg.jpg"); 
+                p {
+                    font-weight: bold;
+                }
+
+                a {
+                    color: #FFFFFF;
+                    font-size: 1rem;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }   
     }
+
+    .footer-4, .footer-5 {
+        margin-left: 2rem;
+    }
+
 }
