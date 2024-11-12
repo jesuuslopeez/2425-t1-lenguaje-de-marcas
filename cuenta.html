@@ -5,12 +5,13 @@
      <link rel="stylesheet" href="css/styles.css">
      <link rel="shortcut icon" href="img/escudo.ico" type="image/x-icon">
      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Xerez Club Deportivo</title>
 </head>
-<body>
+<body class="registro-bg">
     <header>
         <section class="header-1">
             <a href="index.html"><img src="img/header_logo_3.png" alt="Escudo Xerez CD"></a>
@@ -37,14 +38,31 @@
     </header>
 
     <main>
-        <section>
-            <article>
-                <form action="">
-                    <h1>Crear cuenta</h1>
-                    <article>
-                        
-                    </article>
+        <section class="crear-cuenta-principal">
+            <article class="formulario-cuenta iniciar-sesion">
+                <form>
+                    <h1>Iniciar sesión</h1>
+                    <section class="sm-icons">
+                        <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </section>
+                    <span>o usa tu correo electrónico para registrarte</span>
+                    <input type="email" placeholder="correo@alias.es">
+                    <input type="password" placeholder="Contraseña">
+                    <a href="#">¿Has olvidado tu contraseña?</a>
+                    <button><span>Iniciar sesión</span></button>
                 </form>
+            </article>
+
+            <article class="apartado-lateral">
+                <section class="lateral">
+                    <nav class="panel-lateral lateral-der">
+                        <h1>¡Hola, Xerecista!</h1>
+                        <p>Regístrate con tus datos personales para poder acceder a todas las características de la web.</p>
+                        <button class="oculto registro"><span>Regístrate</span></button>
+                    </nav>
+                </section>
             </article>
         </section>
     </main>
