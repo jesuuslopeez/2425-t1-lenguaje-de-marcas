@@ -341,3 +341,24 @@ footer {
     background-image: url('../img/background-cuenta.png');
     background-size: cover; 
 }
+
+/* Nuestra historia  */
+.nuestra-historia-1 {
+    h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 3rem;
+        color: #0090C3;
+    }
+
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        color: #0090C3;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 1remm;
+        color: #000000;
+    }
+}
