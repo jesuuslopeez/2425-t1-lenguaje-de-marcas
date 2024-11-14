@@ -101,6 +101,151 @@ main {
     flex: 1;
 }
 
+/* PLantilla */
+.contenedor-plantilla{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    max-width: 125vh;
+    margin: 0 auto; 
+    padding: 0.75rem;
+
+    .carta {
+        perspective: 62.5rem;
+
+        .carta-completa {
+            width: 100%;
+            padding-bottom: 100%;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+
+            .carta-frontal, .carta-trasera {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                overflow: hidden;
+            }
+
+            .carta-frontal img {
+                width: 90%;
+                object-fit: cover;
+                border-radius: 1rem;
+ 
+            }
+            
+            .carta-trasera {
+                background-color: #0090C3;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 1.5rem;
+                transform: rotateY(180deg);
+                border-radius: 1rem;
+
+                h1 {
+                    font-family: 'Bebas Neue', sans-serif;
+                    margin: 0;
+                    font-size: 2rem;
+                }
+
+                h2 {
+                    font-family: 'Raleway', sans-serif;
+                    margin: 5px 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .carta:hover .carta-completa {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Xerez CD TV */
+.xcdtv-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        color: #0090C3;
+        font-size: 2.5rem;
+        padding-top: 0.5rem;
+    }
+    p {
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        color: #0090C3;
+        font-size: 1rem;
+
+        img {
+            width: 1%;
+        }
+    }
+    .xcdtv-1 {
+        border-radius: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+    }    
+}
+
+/* Tienda */
+.slider-tienda-1 {
+    position: relative; /* Necesario para posicionar el botón */
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: "Bebas Neue", sans-serif;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    button {
+        position: absolute;
+        top: 92%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+        font-family: "Bebas Neue", sans-serif;
+        background-color: White; /* Fondo semitransparente */
+        color: #0090C3;
+        padding: 10px 20px;
+        border: none;
+        font-size: 1.35rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+        color: #FFBE00; 
+        text-decoration: underline; 
+    }
+}
+
+
+
 /* Pie de página */
 footer {
     display: flex;
@@ -344,6 +489,10 @@ footer {
 
 /* Nuestra historia  */
 .nuestra-historia-1 {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
     h1 {
         font-family: "Bebas Neue", sans-serif;
         font-size: 3rem;
@@ -360,5 +509,6 @@ footer {
         font-family: "Raleway", sans-serif;
         font-size: 1remm;
         color: #000000;
+        font-weight: 400;
     }
 }
