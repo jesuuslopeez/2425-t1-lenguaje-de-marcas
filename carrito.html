@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Xerez Club Deportivo</title>
 </head>
-<body>
+<body class="body-carrito">
     <header>
         <section class="header-1">
             <a href="index.html"><img src="img/header_logo_3.png" alt="Escudo Xerez CD"></a>
@@ -36,10 +36,52 @@
         </section>
     </header>
 
-    <main>
+    <main class="main-carrito">
+        <section class="box-carrito">
+            <h1>Carrito de Compras</h1>
+    
+            <section class="carrito-con-productos">
+                <section class="productos-carrito">
+                    <section class="producto-carrito">
+                        <img src="img/kit_1_frontal.png" alt="Camiseta 1ª Equipación">
+                        <section class="info-producto">
+                            <h3>Camiseta 1ª Equipación</h3>
+                            <p class="precio">69,95€</p>
+                            <section class="cantidad">
+                                <label for="cantidad-1">Cantidad:</label>
+                                <input id="cantidad-1" type="number" value="1" min="1">
+                            </section>
+                            <button class="eliminar">Eliminar</button>
+                        </section>
+                    </section>
+                    <section class="producto-carrito">
+                        <img src="img/kit_2_frontal.png" alt="Camiseta 2ª Equipación">
+                        <section class="info-producto">
+                            <h3>Camiseta 2ª Equipación</h3>
+                            <p class="precio">69,95€</p>
+                            <section class="cantidad">
+                                <label for="cantidad-2">Cantidad:</label>
+                                <input id="cantidad-2" type="number" value="1" min="1">
+                            </section>
+                            <button class="eliminar">Eliminar</button>
+                        </section>
+                    </section>
+                </section>
         
+                <!-- Total y finalizar compra a la derecha -->
+                <section class="total-y-finalizar">
+                    <section class="total-carrito">
+                        <p>Subtotal: <span class="subtotal-precio">139,90€</span></p>
+                        <p>Envío: <br> <span class="envio-precio">5,00€</span></p>
+                        <p>Total: <span class="total-precio">144,90€</span></p>
+                        <button class="comprar-carrito">Finalizar Compra</button>
+                    </section>
+                </section>
+            </section>
+        </section>
     </main>
 
+    <section class="footer-banner"></section>
     <footer>
         <section class="footer-1">
             <a href="index.html"><img src="img/escudo.png" alt="Escudo Xerez CD"></a>
