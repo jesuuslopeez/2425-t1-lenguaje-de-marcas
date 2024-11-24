@@ -102,6 +102,102 @@ main {
     flex: 1;
 }
 
+/* Noticias */
+.noticias {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+
+    .titulo-noticias {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3rem;
+        color: #0090C3;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .contenedor-noticias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .noticia {
+            background-color: #f9f9f9;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 0.25rem 0.37rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            .imagen-noticia {
+                width: 100%;
+                height: 30rem;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .contenido-noticia {
+                padding: 1rem;
+
+                h2 {
+                    font-family: 'Bebas Neue', sans-serif;
+                    font-size: 1.75rem;
+                    font-weight: lighter;
+                    color: #333;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 1rem;
+                    color: #555;
+                    margin-bottom: 1rem;
+                }
+
+                .btn-leer-mas {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 1rem;
+                    background-color: #0078A0;
+                    color: white;
+                    border: none;
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 0.3rem;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .btn-leer-mas:hover {
+                    background-color: #005f7a;
+                }
+
+                .botones-compartir {
+                    display: flex;
+                    gap: 1rem;
+                    margin-top: 1rem;
+                }
+
+                .btn-compartir {
+                    display: inline-block;
+                }
+
+                .icono-compartir {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    transition: transform 0.2s;
+                }
+        
+                .btn-compartir:hover .icono-compartir {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .noticia:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0.37rem 0.75rem rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
 /* Plantilla */
 .titulo-plantilla {
     font-family: "Bebas Neue", sans-serif;
