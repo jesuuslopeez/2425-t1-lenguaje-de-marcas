@@ -5,13 +5,22 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+
+    /* Variables */
+    --main-blue: #0090C3;
+    --secondary-blue: #0078A0;
+    --white: #FFFFFF;
+    --yellow: #FFBE00;
+    
+    --title-font: "Bebas Neue", sans-serif;
+    --p-font: 'Raleway', sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 /* Cabecera */
@@ -20,7 +29,7 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 1.3rem;
-        background-color: #0090C3;
+        background-color: var(--main-blue);
 
         img {
             width: 30%;
@@ -40,14 +49,14 @@ header {
 
                 li {
                     a {
-                        font-family: "Bebas Neue", sans-serif;
+                        font-family: var(--title-font);
                         font-size: 1.3rem;
                         color:white;
                         transition: color 0.3s ease, transform 0.3s ease;
                     }
 
                     a:hover {
-                        color: #FFBE00;
+                        color: var(--yellow);
                         text-decoration: underline;
                         transform: scale(1.1);
                     }
@@ -59,7 +68,7 @@ header {
     .header-2 {
         position: relative;
         padding: 1rem 0;
-        background-color: #0078A0;
+        background-color: var(--secondary-blue);
         background-image: url("../img/exdj.png");
         z-index: 1;
 
@@ -71,7 +80,7 @@ header {
             top: -1rem; 
             right: 1.5rem;
             border-radius: 0.5rem;
-            background-color: #0078A0;
+            background-color: var(--secondary-blue);
             box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
         }
 
@@ -109,9 +118,9 @@ main {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 
     .titulo-noticias {
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: var(--title-font);
         font-size: 3rem;
-        color: #0090C3;
+        color: var(--main-blue);
         text-align: center;
         margin-bottom: 2rem;
     }
@@ -139,7 +148,7 @@ main {
                 padding: 1rem;
 
                 h2 {
-                    font-family: 'Bebas Neue', sans-serif;
+                    font-family: var(--title-font);
                     font-size: 1.75rem;
                     font-weight: lighter;
                     color: #333;
@@ -147,16 +156,16 @@ main {
                 }
 
                 p {
-                    font-family: 'Raleway', sans-serif;
+                    font-family: var(--p-font);
                     font-size: 1rem;
                     color: #555;
                     margin-bottom: 1rem;
                 }
 
                 .btn-leer-mas {
-                    font-family: 'Raleway', sans-serif;
+                    font-family: var(--p-font);
                     font-size: 1rem;
-                    background-color: #0078A0;
+                    background-color: var(--secondary-blue);
                     color: white;
                     border: none;
                     padding: 0.75rem 1.5rem;
@@ -198,13 +207,13 @@ main {
     }
 }
 
-/* Plantilla */
 .titulo-plantilla {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: var(--title-font);
     font-size: 4rem;
     text-align: center;
-    color: #0090C3;
+    color: var(--main-blue);
 }
+
 .contenedor-plantilla {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -212,61 +221,66 @@ main {
     max-width: 125vh;
     margin: 0 auto; 
     padding: 0.75rem;
+}
 
-    .carta {
-        perspective: 62.5rem;
+.carta {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    perspective: 62.5rem;
+     
+    .carta-completa {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        transform-style: preserve-3d;
+        transition: transform 1.2s;
+    }
 
-        .carta-completa {
-            width: 100%;
-            padding-bottom: 100%;
-            transform-style: preserve-3d;
-            transition: transform 1s;
+    .carta-frontal, .carta-trasera {
+        position: absolute;
+        width: 100%; 
+        height: 100%;
+        border-radius: 1rem;
+        backface-visibility: hidden; 
+    }
 
-            .carta-frontal, .carta-trasera {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                overflow: hidden;
-            }
+    .carta-frontal img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+    
+    .carta-trasera {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+        color: var(--white);
+        background-color: var(--main-blue);
+        transform: rotateY(180deg); /* Rotación de la cara trasera */
 
-            .carta-frontal img {
-                width: 90%;
-                border-radius: 1rem;
-                object-fit: cover;
-            }
-            
-            .carta-trasera {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 1.5rem;
-                color: white;
-                background-color: #0090C3;
-                transform: rotateY(180deg);
-                border-radius: 1rem;
+        h1 {
+            font-family: var(--title-font);
+            margin: 0;
+            font-size: 2rem;
+        }
 
-                h1 {
-                    font-family: 'Bebas Neue', sans-serif;
-                    margin: 0;
-                    font-size: 2rem;
-                }
-
-                h2 {
-                    font-family: 'Raleway', sans-serif;
-                    margin: 5px 0;
-                    font-size: 1rem;
-                }
-            }
+        h2 {
+            font-family: var(--p-font);
+            margin: 5px 0;
+            font-size: 1rem;
         }
     }
 
-    .carta:hover .carta-completa {
+    &:hover .carta-completa {
         transform: rotateY(180deg);
     }
 }
+
 
 /* Xerez CD TV */
 .xcdtv-general {
@@ -274,19 +288,19 @@ main {
     flex-direction: column;
     align-items: center;
     h1 {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-size: 2.5rem;
         text-align: center;
         padding-top: 0.5rem;
-        color: #0090C3;
+        color: var(--main-blue);
     }
 
     p {
 
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-size: 1rem;
         text-align: center;
-        color: #0090C3;
+        color: var(--main-blue);
 
         img {
             width: 1%;
@@ -320,7 +334,7 @@ main {
         position: absolute;
         top: 85%;
         left: 50%;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-size: 2rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -332,10 +346,10 @@ main {
         padding: 10px 20px;
         top: 92%;
         left: 50%;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-size: 1.35rem;
         font-weight: 500;
-        color: #0090C3;
+        color: var(--main-blue);
         background-color: White; 
         border: none;
         cursor: pointer;
@@ -344,7 +358,7 @@ main {
     }
 
     button:hover {
-        color: #FFBE00; 
+        color: var(--yellow); 
         text-decoration: underline; 
     }
 }
@@ -355,10 +369,10 @@ main {
     margin: 0 auto;
 
     .titulo-seccion {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-weight: 600;
         font-size: 3rem;
-        color: #0090C3;
+        color: var(--main-blue);
         text-align: center;
         margin: 1.5rem 0;
     }
@@ -419,7 +433,7 @@ main {
                 padding: 0.5rem;
 
                 h3 {
-                    font-family: "Bebas Neue", sans-serif;
+                    font-family: var(--title-font);
                     font-size: 1rem; 
                     font-weight: 500;
                     color: #333;
@@ -427,14 +441,14 @@ main {
                 }
 
                 p {
-                    font-family: 'Raleway', sans-serif;
+                    font-family: var(--p-font);
                     padding-bottom: 0.2rem;
                     font-size: 0.9rem; 
                     color: #666;
                 }
 
                 button {
-                    background: #0090C3;
+                    background: var(--main-blue);
                     color: white;
                     padding: 0.5rem 0.75rem; /* Botón más pequeño */
                     border: none;
@@ -443,7 +457,7 @@ main {
                     transition: background 0.3s, color 0.3s;
 
                     &:hover {
-                        background: #0078A0;
+                        background: var(--secondary-blue);
                     }
                 }
             }
@@ -466,8 +480,8 @@ main {
     top: 50%;
     left: 50%;
     border-radius: 20rem;
-    font-family: "Raleway", sans-serif;
-    background-color: #FFFFFF;
+    font-family: var(--p-font);
+    background-color: var(--white);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
     transform: translate(-50%, -50%);
 
@@ -491,7 +505,7 @@ main {
     button {
         
 
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         text-transform: uppercase;
         letter-spacing: 0.5px;
         padding: 0.6rem 2.8rem;
@@ -499,16 +513,16 @@ main {
         border: 0.06rem solid transparent;
         border-radius: 0.5rem;
         cursor: pointer;
-        background-color: #0078A0;
+        background-color: var(--secondary-blue);
 
         span {
-            color: #FFFFFF;
+            color: var(--white);
             font-size: 1.1rem;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
         span:hover {
-            color: #FFBE00;
+            color: var(--yellow);
             text-decoration: underline;   
         }
 
@@ -522,7 +536,7 @@ main {
         padding: 0 2.5rem;
         height: 100%;
         border-radius: 20%;
-        background-color: #FFFFFF; 
+        background-color: var(--white); 
     }
     
     input {
@@ -593,8 +607,8 @@ main {
     width: 200%;
     height: 100%;
     left: -100%;
-    color: #FFFFFF;
-    background: linear-gradient(to left, #0090C3, #0078A0);
+    color: var(--white);
+    background: linear-gradient(to left, var(--main-blue), var(--secondary-blue));
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
@@ -633,12 +647,12 @@ main {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--p-font);
     
     h1 {
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: var(--title-font);
         font-size: 2.5rem;
-        color: #0090C3;
+        color: var(--main-blue);
         margin-bottom: 2rem;
     }
 
@@ -678,13 +692,13 @@ main {
 
                     h3 {
                         font-size: 1.2rem;
-                        font-family: 'Bebas Neue', sans-serif;
+                        font-family: var(--title-font);
                         margin-bottom: 0.5rem;
                     }
                 }
 
                 .info-producto .precio {
-                    color: #0090C3;
+                    color: var(--main-blue);
                     font-size: 1rem;
                 }
 
@@ -718,50 +732,45 @@ main {
                 p {
                     font-size: 1.2rem;
                     margin: 0.5rem 0;
-                    font-family: 'Raleway', sans-serif;
+                    font-family: var(--p-font);
                 }
 
             }
 
             .total-precio, .subtotal-precio, .envio-precio {
-                color: #0090C3;
+                color: var(--main-blue);
                 font-weight: bold;
             }
 
             .total-carrito .comprar-carrito {
-                background: #0090C3;
+                background: var(--main-blue);
                 color: white;
                 border: none;
                 padding: 0.75rem 1.5rem;
                 border-radius: 5px;
-                font-family: 'Bebas Neue', sans-serif;
+                font-family: var(--title-font);
                 font-size: 1rem;
                 cursor: pointer;
                 margin-top: 1rem;
             }
             
             .total-carrito .comprar-carrito:hover {
-                background: #0078A0;
+                background: var(--secondary-blue);
             }
     } 
 }
 }
 
 /* Pie de página */
-.footer-banner {
-    background: url('../img/sponsors.png') #0078A0; 
-    height: 2rem; 
-   
-}
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 1rem 1.25rem; 
-    font-family: "Raleway", sans-serif;
+    font-family: var(--p-font);
     color: white;
-    background-color: #0090C3;
+    background-color: var(--main-blue);
 
     .footer-1 {
         img {
@@ -801,7 +810,7 @@ footer {
                 }
 
                 a {
-                    color: #FFFFFF;
+                    color: var(--white);
                     font-size: 1rem;
                 }
 
@@ -825,21 +834,103 @@ footer {
     margin: 0 auto;
 
     h1 {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-size: 3rem;
-        color: #0090C3;
+        color: var(--main-blue);
     }
 
     h2 {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: var(--title-font);
         font-size: 2rem;
-        color: #0090C3;
+        color: var(--main-blue);
     }
 
     p {
-        font-family: "Raleway", sans-serif;
+        font-family: var(--p-font);
         font-size: 1remm;
         font-weight: 400;
         color: #000000;
     }
+}
+
+/* Municipal de Chapín */
+.info-basica {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.info-texto {
+    font-family: var(--title-font);
+    color: var(--main-blue);
+    flex: 1;
+}
+
+.info-texto p {
+    font-family: var(--p-font);
+    color: #000;
+    margin-top: 1rem;
+}
+
+.info-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.imagen-estadio {
+    width: 100%;
+    max-width: 40rem;
+    border-radius: 1rem;
+}
+
+.datos-estadio {
+    background-color: var(--white);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+    max-width: 50rem;
+    text-align: center;
+    
+    h1 {
+        font-family: var(--title-font);
+        color: #0090C3;
+    }
+}
+
+.lista-datos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-datos li {
+    font-family: var(--p-font);
+    margin: 0.5rem 0;
+}
+
+.galeria-estadio {
+    font-family: var(--title-font);
+    color: var(--main-blue);
+    margin: 2rem auto;
+    max-width: 75rem;
+    padding: 1rem;
+}
+
+.galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 1rem;
+}
+
+.imagen-galeria {
+    width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.imagen-galeria:hover {
+    transform: scale(1.05);
 }
