@@ -8,7 +8,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Xerez Club Deportivo</title>
+    <title>Xerez CD TV | Xerez Club Deportivo</title>
 </head>
 <body>
     <header>
@@ -37,13 +37,31 @@
     </header>
 
     <main>
-        <section class="xcdtv-general">
-            <h1>Xerez CD - Leyendas Xerez CD</h1>
-            <p>Powered by <img src="img/mundomovil.png" alt="MundoMovilNetwork"></p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/HhLUIXHd18Q?si=YsLl_l-GlGrczDoM" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="xcdtv-1">
-            </iframe>
+        <section class="xcdtv-video">
+            <h1>Xerez CD TV</h1>
+            <h2>Desarrollado por <img src="img/mundomovil.png" alt="MundoMovil Network"></h2>
+            <section class="tv-video">
+                <video controls autoplay loop>
+                    <source src="img/part_xcdtv.mp4" type="video/mp4">
+                </video>
+            </section>
+
+            <section class="xcdtv-chat">
+                <h2>Chat en directo: </h2>
+                <article class="chat-box">
+                    <p><span>GxlDeReina:</span> ¡Vamos Xerez!</p>
+                    <p><span>ArmgenGxl:</span> Aquí ya va haciendo falta un cambio de entrenador...</p>
+                    <p><span>AlexGuillenXCD:</span> XEREZ DEPORTIVO, CON LOS COLORES DEL XEREZ TODOS UNIDOS!</p>
+                    <p><span>Xerecista1947:</span> Confio en que al recre le ganamos!!</p>
+                    <p><span>PuroXCD:</span> ¡Forza Xerez!</p>
+                </article>
+                <article class="contenedor-mensajes">
+                    <input type="text" placeholder="Escribe tu mensaje aquí" class="chat-input">
+                    <button class="chat-enviar">Enviar</button>
+                </article>
+            </section>
+        </section>
+    </main>
     </main>
 
     <footer>
