@@ -12,10 +12,20 @@
 <body>
     <header>
         <section class="header-1">
-            <a href="index.html"><img src="img/header_logo_3.png" alt="Escudo Xerez CD"></a>
-
-            <nav>
-                <ul>
+            <section class="logo">
+                <a href="index.html"><img src="img/header_logo_3.png" alt="Logo Header"></a>
+            </section>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            
+            <label for="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="nav">
+                <ul class="nav-list">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="noticias.html">Noticias</a></li>
                     <li><a href="plantilla.html">Plantilla</a></li>
@@ -38,7 +48,6 @@
     <main>
         <section class="slider-tienda-1">
             <img src="img/campanaabonados.webp" alt="Slider Tienda">
-            <h1>Consigue ya tu abono de la temporada 24/25</h1>
             <a href="comprarabono.html"><button>Abónate</button></a>
         </section>
 
@@ -134,41 +143,47 @@
         
     </main>
 
-    <footer>
-        <section class="footer-1">
-            <a href="index.html"><img src="img/escudo.png" alt="Escudo Xerez CD"></a>
+    <footer class="footer">
+        <section class="footer-left">
+            <a href="index.html"><img src="img/escudo.png" alt="Logo" class="logo"></a>
+            <article class="contact-info">
+                <article class="contact-item">
+                    <img src="img/telefono.png" alt="Teléfono de contacto" class="contact-icon">
+                    <span>+34 856656738</span>
+                </article>
+                <article class="contact-item">
+                    <img src="img/direccion.png" alt="Dirección sede" class="contact-icon">
+                    <span>Calle Laguna de Gallocanta, 20</span>
+                </article>
+                <article class="contact-item">
+                    <img src="img/mail.png" alt="Emai de contacto" class="contact-icon">
+                    <span>contacto@xerezclubdeportivo.es</span>
+                </article>
+            </article>
         </section>
-    
-        <section class="footer-2">
-            <p><img src="img/telefono.png" alt="Teléfono" class="icons"> +34 856656738</p>
-            <p><img src="img/direccion.png" alt="Dirección" class="icons"> Calle Laguna de Gallocanta, 20</p>
-            <p><img src="img/mail.png" alt="Correo electrónico" class="icons"> contacto@xerezclubdeportivo.es</p>
+        <section class="footer-right">
+            <article class="footer-menu">
+                <ul>
+                    <li><p>Xerez CD</p></li>
+                    <li><a href="nuestrahistoria.html">Nuestra historia</a></li>
+                    <li><a href="campanaabonados.html">Campaña de abonados</a></li>
+                </ul>
+            </article>
+            <article class="footer-menu">
+                <ul>
+                    <li><p>Nuestras instalaciones</p></li>
+                    <li><a href="chapin.html">Municipal de Chapín</a></li>
+                    <li>Complejo Deportivo La Granja</li>
+                </ul>
+            </article>
+            <article class="footer-menu">
+                <ul>
+                    <li><p>Información</p></li>
+                    <li>Términos y Condiciones</li>
+                    <li>Política de privacidad</li>
+                </ul>
+            </article>
         </section>
-    
-        <nav class="footer-3">
-            <ul>
-                <li><p>Xerez CD</p></li>
-                <li><a href="nuestrahistoria.html">Nuestra historia</a></li>
-                <li><a href="campanaabonados.html">Campaña de abonados</a></li>
-            </ul>
-        </nav>
-
-        <nav class="footer-4">
-            <ul>
-                <li><p>Nuestras instalaciones</p></li>
-                <li><a href="chapin.html">Municipal de Chapín</a></li>
-                <li><a href="lagranja.html">Complejo Deportivo La Granja</a></li>
-            </ul>
-        </nav>
-
-        <nav class="footer-5">
-            <ul>
-                <li><p>Información</p></li>
-                <li><a href="terminosycondiciones.html">Términos y Condiciones</a></li>
-                <li><a href="politicadeprivacidad.html">Política de privacidad</a></li>
-            </ul>
-        </nav>
-
     </footer>
 </body>
 </html>
