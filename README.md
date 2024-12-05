@@ -70,3 +70,5 @@
     
     -   **Optimización de rendimiento:**
 - **Producto**: Informe de accesibilidad y mejoras aplicadas al proyecto.
+
+[Video Explicativo](https://drive.google.com/file/d/1q5IQHDs2w7BJP3RknHrB5uXmif3ZDW1G/view?usp=sharing)

@@ -1097,10 +1097,6 @@ main {
             color: #333;
             background-color: #f9f9f9;
         }
-
-        tbody tr:nth-child(odd) td {
-            background-color: #f2f2f2;
-        }
     }
 
     .tabla-abonados tbody tr:hover td {
