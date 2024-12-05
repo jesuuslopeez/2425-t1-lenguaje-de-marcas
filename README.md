@@ -36,7 +36,7 @@
     -   **Desarrollo de páginas secundarias:**
 			- He puesto varias páginas, quizás algo distintas a las sugeridas, pero más acordes al tema de mi web.
     -   **Enlazado entre páginas:**  Todas las páginas se encuentran correctamente enlazadas
-    -   **Producto**: En general cumple con lo requerido.
+    -   **Producto**: `./index.html`
 4.  **Aplicación de hojas de estilo CSS:**
     
     -   **Organización correcta de los estilos**, se encuentra organizada por el orden de páginas en la propia web.
@@ -49,26 +49,17 @@
         -   La página es responsive y tiene media querys en 768px y 605px
     -   **Diseño de componentes específicos:**
         -   Hay cosas con estilos únicos, como los formularios de inicio o suscripción al newsletter, los productos de la tienda, la plantilla, y muchas más.
-5.  **Producto**: Hay un único archivo css para todos los html.
+5.  **Producto**: `./css/styles.css`
 6.  **Implementación de diseño responsive:**
-    -   He utilizado media querys para hacer una web responsive
-    -   **Producto**: Se adapta bien a la mayoría de resoluciones
+    -   La mayoría de páginas (si lo requerian) tienen su media query correspondiente para que la página se adapte lo mejor posible a todas las resoluciones.
 7.  **Inserción de imágenes y vídeos:**
-    - He integrado imágenes y vídeos en mi web
+    - He integrado imágenes en casi todas las páginas y un video en la página de la televisión.
     
 ### **Fase 3: Implementación y Validación del Código**
 #### Actividades:
-
 1.  **Validación del código HTML:**
     
-    -   He validado el HTML y verificado su funcionamiento.
-    -   **Producto**: Informes de validación que muestren el estado del código HTML y los errores corregidos.
+    -   He revisado varias veces el HTML y funciona correctamente, aunque obviamente hay estructuras que se podrían mejorar.
 2.  **Validación del código CSS:**
-    -   He validado el css y verificado su funcionamiento.
-    -   **Producto**: Informes de validación de CSS y correcciones aplicadas.
-3.  **Optimización y comprobación de accesibilidad, usabilidad:**
-    
-    -   **Optimización de rendimiento:**
-- **Producto**: Informe de accesibilidad y mejoras aplicadas al proyecto.
-
+    -   He revisado el código del CSS varias veces y funciona bien, siguiendo un estilo de anidamiento para tenerlo todo más ordenado.
 [Video Explicativo](https://drive.google.com/file/d/1q5IQHDs2w7BJP3RknHrB5uXmif3ZDW1G/view?usp=sharing)
